@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint6;
+﻿using System.Text;
+using tyuiu.cources.programming.interfaces.Sprint6;
 
 namespace Tyuiu.TishkinaEA.Sprint6.Task1.V27.Lib
 {
@@ -17,6 +18,31 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task1.V27.Lib
             }
 
             return results;
+        }
+
+        private double CalculateFunction(double x)
+        {
+            if (Math.Abs(x - 2) < 1e-9) 
+            {
+                return 0; 
+            }
+
+            double result = 4 - 2 * x + (2 + Math.Cos(x)) / (2 * x - 2);
+            return Math.Round(result, 2); 
+        }
+
+        public void DisplayResults(TextBox textBox, int startValue, int stopValue)
+        {
+            double[] results = GetMassFunction(startValue, stopValue);
+            StringBuilder output = new StringBuilder();
+
+            for (int i = 0; i < results.Length; i++)
+            {
+                int x = startValue + i;
+                output.AppendLine($"F({x}) = {results[i]}");
+            }
+
+            textBox.Text = output.ToString();
         }
     }
 }
