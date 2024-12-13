@@ -42,7 +42,7 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task1.V27.Lib
                 output.AppendLine($"F({x}) = {results[i]}");
             }
 
-            textBox.Text = output.ToString();
+            textBox.Text = output.ToString(); 
         }
     }
 }
