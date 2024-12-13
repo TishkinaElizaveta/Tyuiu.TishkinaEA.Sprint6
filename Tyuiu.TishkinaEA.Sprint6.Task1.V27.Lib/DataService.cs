@@ -14,11 +14,21 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task1.V27.Lib
             for (int i = 0; i < size; i++)
             {
                 int x = startValue + i * step;
-                results[i] = GetMassFunction(x);
+                results[i] = CalculateFunction(x);
             }
 
             return results;
 
+        }
+        private double CalculateFunction(double x)
+        {
+            if (Math.Abs(x - 2) < 1e-9) // Проверка на деление на ноль
+            {
+                return 0; // Возвращаем 0 при делении на ноль
+            }
+
+            double result = 4 - 2 * x + (2 + Math.Cos(x)) / (2 * x - 2);
+            return Math.Round(result, 2); // Округляем до двух знаков после запятой
         }
     }
 }
