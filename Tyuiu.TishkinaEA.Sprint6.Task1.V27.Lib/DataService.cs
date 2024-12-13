@@ -31,18 +31,6 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task1.V27.Lib
             return Math.Round(result, 2); 
         }
 
-        public void DisplayResults(TextBox textBox, int startValue, int stopValue)
-        {
-            double[] results = GetMassFunction(startValue, stopValue);
-            StringBuilder output = new StringBuilder();
-
-            for (int i = 0; i < results.Length; i++)
-            {
-                int x = startValue + i;
-                output.AppendLine($"F({x}) = {results[i]}");
-            }
-
-            textBox.Text = output.ToString(); 
         }
     }
 }
