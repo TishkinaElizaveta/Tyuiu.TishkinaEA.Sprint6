@@ -6,12 +6,6 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task7.V5.Lib
     {
         public int[,] GetMatrix(string path)
         {
-            using System;
-            using System.IO;
-            using System.Linq;
-
-namespace MatrixCsvProcessorLibrary
-    {
         public class MatrixCsvProcessor
         {
             /// <summary>
