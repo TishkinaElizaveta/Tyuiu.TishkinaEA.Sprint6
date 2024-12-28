@@ -27,7 +27,7 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task2.V13.Lib
                 double result = Math.Sin(x) + divisionResult - Math.Cos(x) * 4 * x;
 
                 // Округляем до двух знаков
-                results[i] = Math.Round(result, 2);
+                results[i] = Math.Round(result, 2); 
             }
 
             return results;
