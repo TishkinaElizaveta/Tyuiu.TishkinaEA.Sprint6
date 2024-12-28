@@ -6,6 +6,8 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task2.V13.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
+
+            // Проверяем корректность диапазона
             if (startValue > stopValue)
                 throw new ArgumentException("startValue должен быть меньше или равен stopValue");
 
@@ -20,14 +22,13 @@ namespace Tyuiu.TishkinaEA.Sprint6.Task2.V13.Lib
                 int x = range[i];
 
                 // Проверяем деление на ноль
-                double denominator = 3.0;
-                double divisionResult = (denominator == 0) ? 0 : (2.0 * x / denominator);
+                double divisionResult = (3.0 != 0) ? (2.0 * x / 3.0) : 0;
 
                 // Вычисляем значение функции
                 double result = Math.Sin(x) + divisionResult - Math.Cos(x) * 4 * x;
 
                 // Округляем до двух знаков
-                results[i] = Math.Round(result, 2); 
+                results[i] = Math.Round(result, 2);
             }
 
             return results;
